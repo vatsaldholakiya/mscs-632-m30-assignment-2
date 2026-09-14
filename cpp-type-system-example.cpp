@@ -26,7 +26,8 @@ template <class T> void announce(const T& t) {
 }
 
 int main() {
-    int temp = -20;                     
+    int temp = -20;
+    // we don't try type casting here as it results in compile-time errors even with a try-catch when non dynamic_cast types as int are involved.
     cout<<"-20" + 1<<"\n";     
     cout<<temp + true<<"\n";   
 
@@ -36,9 +37,12 @@ int main() {
     cout<<gear.size()<<partner.size()<<"\n";   
 
     Peak k2{"K2", 8611};
-    announce(k2); announce(Glacier{});  
+    announce(k2); 
+    announce(Glacier{});  
     cout<<k2.m / 4<<"\n";      
     unsigned long long flakes = 1;
-    for (int h = 0; h < 70; ++h) flakes *= 2;
+    for (int h = 0; h < 70; ++h) {
+        flakes *= 2;
+    }
     cout<<flakes<<"\n";        
 }
