@@ -2,7 +2,8 @@ class Landmark:
     def report(self): return "?"
 
 class Peak(Landmark):
-    def __init__(self, name, m): self.name, self.m = name, m
+    def __init__(self, name, m): 
+        self.name, self.m = name, m
     def report(self): return f"{self.name} {self.m}m"
 
 class Glacier:
