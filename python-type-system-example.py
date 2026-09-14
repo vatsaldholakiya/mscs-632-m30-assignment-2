@@ -4,7 +4,8 @@ class Landmark:
 class Peak(Landmark):
     def __init__(self, name, m): 
         self.name, self.m = name, m
-    def report(self): return f"{self.name} {self.m}m"
+    def report(self): 
+        return f"{self.name} {self.m}m"
 
 class Glacier:
     def report(self): return "Baltoro 4000m"
