@@ -28,3 +28,4 @@ announce(k2);
 announce({ report: () => "Baltoro 4000m" });
 console.log(k2.m / 4);
 console.log(2 ** 70, 2n ** 70n);
+console.log(2n + 1)
